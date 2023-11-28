@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">LoginApp</string>
+    <string name="error">Произошла ошибка</string>
+    <string name="wrong_password">Неверный логин или пароль</string>
+</resources>

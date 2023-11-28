@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.loginapp.ui.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_paymentsFragment"
+            app:destination="@id/paymentsFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentsFragment"
+        android:name="com.example.loginapp.ui.payments.PaymentsFragment"
+        android:label="fragment_payments"
+        tools:layout="@layout/fragment_payments">
+        <action
+            android:id="@+id/action_paymentsFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/paymentsFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
